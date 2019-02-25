@@ -6,8 +6,17 @@ If you want to run this project on Windows via download, here the step :
 - Rename <strong>.env.example</strong> in parent directory IF NECESSARY
 - Ready to go <code>php artisan serve</code>
 
+There is some record on database with some user. Here the list email login for these user
+- arix.wap@gmail.com
+- bean@gmail.com
+- rangga@gmail.com
+- chef.juna@gmail.com
+
+All user has same password, its is <code>26262669</code>
+
 <strong>Thats All.</strong> 
-Below is Laravel original readme file
+
+<em>Below is Laravel original readme file</em>
 
 <br><br>
 
