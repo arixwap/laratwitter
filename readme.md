@@ -15,7 +15,7 @@ If you want to run this project on Windows via download, here the step :
 - Rename <strong>.env.example</strong> in parent directory IF NECESSARY
 - Ready to go <code>php artisan serve</code>
 
-<strong>Thats All.</strong>
+<strong>Thats All.</strong> 
 Below is Laravel original readme file
 
 ## About Laravel
