@@ -18,7 +18,9 @@ All user has same password, its is <code>26262669</code>
 
 <em>Below is Laravel original readme file</em>
 
-<br><br>
+<br>
+<hr/>
+<br>
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
