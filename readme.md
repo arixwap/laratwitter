@@ -16,7 +16,6 @@ If you want to run this project on Windows via download, here the step :
 - Ready to go <code>php artisan serve</code>
 
 <strong>Thats All.</strong>
-
 Below is Laravel original readme file
 
 ## About Laravel
