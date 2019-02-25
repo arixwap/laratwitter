@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## About Project - Laravel Twitter Application
+This application store data using <strong>Mysqlite</strong>. It's locate at <code>database/db_lara_twitter.mysqlite</code>
+If you want to run this project on Windows via download, here the step :
+- Install Vendor Packages - open Command Line and type <code>composer install</code>
+- This project doesn't need <em>Migrate</em> via <code>php artisan migrate</code>
+- Rename <strong>.env.example</strong> in parent directory IF NECESSARY
+- Ready to go <code>php artisan serve</code>
+
+<strong>Thats All.</strong>
+
+Below is Laravel original readme file
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
