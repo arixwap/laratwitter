@@ -1,6 +1,7 @@
 ## About Project - Laravel Twitter Application
 This application store data using <strong>Mysqlite</strong>. It's locate at <code>database/db_lara_twitter.mysqlite</code>
 If you want to run this project on Windows via download, here the step :
+- Make sure you already have <strong>Composer</strong> installed on your machine. Open https://getcomposer.org/ for full guide
 - Install Vendor Packages - open Command Line and type <code>composer install</code>
 - This project doesn't need <em>Migrate</em> via <code>php artisan migrate</code>. Because the data already exist in <code>database/db_lara_twitter.mysqlite</code>
 - Start the serve by <code>php artisan serve</code>. And there you go!
