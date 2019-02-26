@@ -13,7 +13,7 @@ There is some record on database with some user. Here the list email login for t
 - rangga@gmail.com
 - chef.juna@gmail.com
 
-All user has same password, its is <code>26262669</code>
+All user has same password, Password is <code>26262669</code>
 
 <strong>Thats All.</strong> 
 
