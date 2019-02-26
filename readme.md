@@ -3,7 +3,7 @@ This application store data using <strong>Mysqlite</strong>. It's locate at <cod
 If you want to run this project on Windows via download, here the step :
 - Install Vendor Packages - open Command Line and type <code>composer install</code>
 - This project doesn't need <em>Migrate</em> via <code>php artisan migrate</code>
-- Rename <strong>.env.example</strong> in parent directory IF NECESSARY
+- Rename <strong>.env.example</strong> to <strong>.env</strong> in parent directory IF NECESSARY
 - Ready to go <code>php artisan serve</code>
 
 There is some record on database with some user. Here the list email login for these user
