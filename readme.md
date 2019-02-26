@@ -4,7 +4,7 @@ If you want to run this project on Windows via download, here the step :
 - Install Vendor Packages - open Command Line and type <code>composer install</code>
 - This project doesn't need <em>Migrate</em> via <code>php artisan migrate</code>
 - Start the serve by <code>php artisan serve</code>. And there you go!
-- <span style="color:#f00;"><strong>IF THE APP SHOW ERROR 500</strong>, it could be possible because the database <em>mysqlite</em> doesn't connect or not found. Try to rename <strong>.env.example</strong> to <strong>.env</strong> in parent directory and check file <code>db_lara_twitter.mysqlite</code> in <code>database</code> is exist.</span>
+- <strong>IF THE APP SHOW ERROR 500</strong>, it could be possible because the database <em>mysqlite</em> doesn't connect or not found. Try to rename <strong>.env.example</strong> to <strong>.env</strong> in parent directory and check file <code>db_lara_twitter.mysqlite</code> in <code>database</code> is exist.
 
 There is some record on database with some user. Here the list email login for these user
 - arix.wap@gmail.com
