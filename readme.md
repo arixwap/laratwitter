@@ -1,6 +1,11 @@
-## About Project - Laravel Twitter Application
-This application store data using <strong>Mysqlite</strong>. It's locate at <code>database/db_laratwitter.mysqlite</code>
-If you want to run this project on Windows via download, here the step :
+## Laratwitter - Simple Social Media
+Made with <strong>Laravel 5.7</strong>, and store data using <strong>Mysqlite</strong>.
+This application just simple social media with feature :
+- Login / Register Account
+- Post Status with another user timeline
+- Update & upload profile image
+
+<strong>Installation Step :</strong>
 - Make sure you already have <strong>Composer</strong> installed on your machine. Open https://getcomposer.org/ for full guide
 - Do <code>composer install</code>
 - Start the serve by <code>php artisan serve</code>. And there you go!
