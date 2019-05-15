@@ -26,6 +26,8 @@ class HomeController extends Controller
     {
         $sortBy = 'posts.created_at';
         $sortDirection = 'DESC';
+        $posts = Post::orderBy($sortBy, $sortDirection)->get();
+        dd($posts->toArray());
         $posts = Post::join('users', 'posts.id_user', '=', 'users.id')
             ->where('posts.show_post', '=', '1')
             ->orderBy($sortBy, $sortDirection)->get();

@@ -15,12 +15,12 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user');
-            $table->text('content');
-            $table->boolean('show_post');
-            $table->integer('id_first_post');   // history edit post
-            $table->integer('id_parent_post');  // komen & reply post
+            $table->integer('user_id');
+            $table->text('content')->nullable();
+            $table->json('edit_history')->nullable();
+            $table->unsignedInteger('reply_post_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

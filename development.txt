@@ -1,0 +1,24 @@
+LAST EDIT :
+Riset Migration File
+
+Features :
+- Comment, Reply Post
+- Add scafolding softdeletes
+- Testing migration with diff column name
+- create seeds for user and post
+
+Frontend :
+- Crop & Resizing upload image
+- Fixing Template Engine
+
+Framework :
+- Migrate to Vue.js
+- File Storage Class - Spatie
+
+
+Teknik jika ingin melakukan normalisasi migration schema blueprint database laravel:
+- Pastikan migration sudah fix hingga rename, delete maupun modify column attribute
+- Dump Data semua tabel, kecuali migration, cache atau table yang berhubungan dengan konfigurasi laravel
+- revisi coding normalisasi blueprint migration
+- lakukan migrate:fresh atau migrate dari awal
+- restore database yang telah didump
