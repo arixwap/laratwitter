@@ -1,5 +1,6 @@
 LAST EDIT :
 Riset Migration File
+- Dump SQLite DB and migrate refresh - https://github.com/spatie/db-dumper
 
 Features :
 - Comment, Reply Post
