@@ -14,22 +14,22 @@
             @csrf
             <div class="w3-row w3-margin-top w3-margin-bottom">
                 <div class="w3-rest">
-                    <textarea id="content" name="content" class="w3-input w3-border" placeholder="{{ __('Update a status...') }}" required></textarea>
+                    <textarea id="content" name="content" class="w3-input w3-border" placeholder="Update a status..." required></textarea>
                 </div>
             </div>
             <div class="w3-row w3-margin-bottom w3-right">
-                <button type="submit" class="w3-button w3-cyan w3-text-white w3-hover-light-blue w3-hover-text-white w3-padding" style="min-width: 100px">{{ __('Update') }}</button>
+                <button type="submit" class="w3-button w3-cyan w3-text-white w3-hover-light-blue w3-hover-text-white w3-padding" style="min-width: 100px">Update</button>
             </div>
         </form>
     </div>
     <div class="w3-container">
         @foreach($posts as $post)
             <div class="w3-row w3-margin-bottom w3-white">
-                <div class="w3-col w3-margin w3-hide-small {{ Auth::user()->id==$post->id ? 'w3-right' : '' }}" style="max-width: 70px">
-                    <img src="{{ $post->profile_picture==null ? asset('img/no_avatar.jpg') : $post->profile_picture }}" class="w3-image w3-circle">
+                <div class="w3-col w3-margin w3-hide-small {{ ($post->isAuth) ? 'w3-right' : '' }}" style="max-width: 70px">
+                    <img src="{{ $post->user->profile_picture ? $post->user->profile_picture : asset('img/no_avatar.jpg') }}" class="w3-image w3-circle">
                 </div>
-                <div class="w3-rest w3-margin {{ Auth::user()->id==$post->id ? 'w3-right-align' : '' }}">
-                    <strong>{{ $post->name }}</strong>&emsp;<em class="w3-small w3-text-grey w3-hide-small">{{ date('D, j M Y g:i a', strtotime($post->created_at)) }}</em>
+                <div class="w3-rest w3-margin {{ ($post->isAuth)? 'w3-right-align' : '' }}">
+                    <strong>{{ $post->user->name }}</strong>&emsp;<em class="w3-small w3-text-grey w3-hide-small" title="{{ $post->created_at->format('g:i A - l, j M Y') }}">{{ $post->created_at->diffForHumans() }}</em>
                     <p>{{ $post->content }}</p>
                 </div>
             </div>
