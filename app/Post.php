@@ -10,11 +10,11 @@ class Post extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'content', 'id_user', 'show_post', 'id_first_post', 'id_parent_post'
+        'content', 'user_id'
     ];
 
     public function user()
     {
-        return $this->belongsTo('user', 'user_id');
+        return $this->belongsTo('App\User', 'user_id');
     }
 }
