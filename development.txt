@@ -1,25 +1,24 @@
-LAST EDIT :
-Riset Migration File
-- Dump SQLite DB and migrate refresh - https://github.com/spatie/db-dumper
+Script :
+- Fixing Controller
+- Fixing Route
+- Class Upload File Storage - Spatie
+- Database Seeder untuk Users and Posts
 
 Features :
-- Comment, Reply Post
-- Add scafolding softdeletes
-- Testing migration with diff column name
-- create seeds for user and post
+- Comment Post
 
-Frontend :
+UI & UX:
 - Crop & Resizing upload image
-- Fixing Template Engine
-
-Framework :
+- Fix Coding Template Engine
 - Migrate to Vue.js
-- File Storage Class - Spatie
 
 
-Teknik jika ingin melakukan normalisasi migration schema blueprint database laravel:
+
+INFORMATION
+
+Teknik Normalisasi Migration File Laravel:
 - Pastikan migration sudah fix hingga rename, delete maupun modify column attribute
 - Dump Data semua tabel, kecuali migration, cache atau table yang berhubungan dengan konfigurasi laravel
-- revisi coding normalisasi blueprint migration
+- Revisi coding create table migration. Lakukan normalisasi sesuai perubahan yang digunakan sekarang
 - lakukan migrate:fresh atau migrate dari awal
 - restore database yang telah didump
