@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,35 +25,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $sortBy = 'posts.created_at';
+        $sortBy = 'created_at';
         $sortDirection = 'DESC';
         $posts = Post::orderBy($sortBy, $sortDirection)->get();
-        dd($posts->toArray());
-        $posts = Post::join('users', 'posts.id_user', '=', 'users.id')
-            ->where('posts.show_post', '=', '1')
-            ->orderBy($sortBy, $sortDirection)->get();
-        return view('home', compact('posts'));
-    }
+        
+        foreach ($posts as $post) {
+            $post->isAuth = false;
+            if($post->user->id == Auth::id()) {
+                $post->isAuth = true;
+            }
+        }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $request->validate([
-            'content'=>'required'
-        ]);
-        $post = new Post([
-            'content' => $request->get('content'),
-            'id_user'=> Auth::user()->id,
-            'show_post'=> 1,
-            'id_first_post' => 0,
-            'id_parent_post' => 0
-        ]);
-        $post->save();
-        return redirect('/')->with('success', 'Post success');
+        return view('home', compact('posts'));
     }
 }

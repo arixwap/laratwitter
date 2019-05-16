@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Intervention\Image\ImageManagerStatic as Image;
-use App\User;
 
 class ProfileController extends Controller
 {
@@ -28,7 +28,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $profile = User::where('id', '=', Auth::id())->first();
+        $profile = User::find(Auth::id());
         return view ('profile', compact('profile'));
     }
 

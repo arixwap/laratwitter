@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Post;
 
 class PostController extends Controller
 {
@@ -49,14 +49,13 @@ class PostController extends Controller
         $request->validate([
             'content' => ['required', 'string', 'max:1000']
         ]);
+
         $post = new Post([
             'content' => $request->get('content'),
-            'id_user' => Auth::id(),
-            'show_post' => 1,
-            'id_first_post' => 0,
-            'id_parent_post' => 0
+            'user_id' => Auth::id()
         ]);
         $post->save();
+        
         return redirect('/')->with('success', 'Post success');
     }
 
