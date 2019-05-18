@@ -9,36 +9,6 @@ use Illuminate\Support\Facades\Auth;
 class PostController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return redirect('/');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return redirect('/');
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -54,6 +24,7 @@ class PostController extends Controller
             'content' => $request->get('content'),
             'user_id' => Auth::id()
         ]);
+        
         $post->save();
         
         return redirect('/')->with('success', 'Post success');
@@ -67,18 +38,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return redirect('/');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        return redirect('/');
+        // single post and its comment
     }
 
     /**
@@ -90,7 +50,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return redirect('/');
+        // update / edit post, store prev post into edit_history column
     }
 
     /**
@@ -101,6 +61,6 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        return redirect('/');
+        // softdelete post
     }
 }

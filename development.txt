@@ -1,19 +1,30 @@
+Tasking Release v1.1.0 :
+- Marked Priority with [P]
+- Marked Done with [D]
+
 Script :
-- Fixing Route
-- Fixing Controller
-- Class Upload File Storage - Spatie
-- Database Seeder untuk Users and Posts
+- Revision Script Route [D]
+- Revision Script Controller [P.2]
+- Class Upload File Storage - Spatie [P.5]
+- Database Seeder untuk Users and Posts [P.4]
+- Create automatic user_name from name column
 
 Features :
+- Profile Other User, Using user_name / user_id as url suffix
 - Comment Post
 
 UI & UX:
+- Custom Error Page
 - Crop & Resizing upload image
-- Fix Coding Template Engine
+- Fix Coding Template Engine [P.3]
 - Migrate to Vue.js
 
+Database:
+- Table `users`, Add column `username` (unique)
 
 
+
+--------------------------------------------------------------------------------------------------------------
 INFORMATION
 
 Teknik Normalisasi Migration File Laravel:

@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // code to execute before method loaded
     }
 
     /**
@@ -29,10 +29,11 @@ class HomeController extends Controller
         $sortDirection = 'DESC';
         $posts = Post::orderBy($sortBy, $sortDirection)->get();
         
-        foreach ($posts as $post) {
-            $post->isAuth = false;
+        foreach($posts as $post) {
             if($post->user->id == Auth::id()) {
                 $post->isAuth = true;
+            } else {
+                $post->isAuth = false;
             }
         }
 

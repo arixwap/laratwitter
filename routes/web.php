@@ -11,16 +11,20 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::middleware(['auth'])->group(function(){
+    
+    Route::get('/', 'HomeController@index')->name('home');
+    
+    Route::redirect('home', '/');
 
-Route::get('home', 'HomeController@index')->name('home');
+    // Route::resource('post', 'PostController', [ 'except' => ['index', 'create', 'edit'] ]);
+    
+    Route::post('post', 'PostController@store')->name('post.store');
 
-Route::resource('post', 'PostController');
+    Route::resource('profile', 'ProfileController', [ 'only' => ['index', 'update'] ]);
+    
+});
 
-Route::resource('profile', 'ProfileController');
+

@@ -7,20 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Intervention\Image\ImageManagerStatic as Image;
+use Intervention\Image\ImageManagerStatic;
 
 class ProfileController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -29,28 +19,8 @@ class ProfileController extends Controller
     public function index()
     {
         $profile = User::find(Auth::id());
+
         return view ('profile', compact('profile'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return redirect('profile');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        return redirect('profile');
     }
 
     /**
@@ -61,18 +31,7 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        return redirect('profile');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        return redirect('profile');
+        // show other user profile by id / username.
     }
 
     /**
@@ -93,7 +52,7 @@ class ProfileController extends Controller
             $name = str_replace(' ', '', $name); 
             $name = str_replace('.', '', $name);
             $name = "pp_".$name."_".Auth::id().".jpg";
-            $image = Image::make($request->file('picture')->getRealPath());
+            $image = ImageManagerStatic::make($request->file('picture')->getRealPath());
             $image->fit(800);
             $image->save(public_path().'/img/'.$name);
             $user->profile_picture = asset('img/'.$name);
@@ -124,6 +83,6 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        return redirect('profile');
+        // softdelete close account
     }
 }
