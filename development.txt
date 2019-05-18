@@ -1,6 +1,6 @@
 Script :
-- Fixing Controller
 - Fixing Route
+- Fixing Controller
 - Class Upload File Storage - Spatie
 - Database Seeder untuk Users and Posts
 
