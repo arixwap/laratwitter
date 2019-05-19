@@ -4,14 +4,15 @@ Tasking Release v1.1.0 :
 
 Script :
 - Revision Script Route [D]
-- Revision Script Controller [P.2]
-- Class Upload File Storage - Spatie [P.5]
-- Database Seeder untuk Users and Posts [P.4]
+- Revision Script Controller [P.5]
+- Class Upload File Storage - Spatie [P.4]
+- Database Seeder untuk Users and Posts [P.2]
 - Create automatic user_name from name column
 
 Features :
 - Profile Other User, Using user_name / user_id as url suffix
 - Comment Post
+- Language App
 
 UI & UX:
 - Custom Error Page
