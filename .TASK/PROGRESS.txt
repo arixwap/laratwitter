@@ -1,0 +1,16 @@
+PROGRESS --> Halaman Profile
+
+DEVELOPMENT :
+- Post Status - Press Keyboard Enter = Submit
+- Halaman Register dan Login jadi 1
+- Mobile Page - Foto dari status teman belum ditampilkan
+- Datetime Laravel Library
+- Directory File Laravel Library
+- text validation login kurang tepat
+- deactive route ke function yg tak digunakan
+- Desain Error Page 404
+- Infinite scroll timeline
+- Komen, Reply & Edit Status
+- Follow Orang Lain
+- Halaman Profile orang lain
+- Hanya Menampilkan Post dari orang yg di follow

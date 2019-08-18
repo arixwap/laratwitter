@@ -1,0 +1,23 @@
+tabel User :
+- id
+- name
+- email
+- password
+- profile_picture
+- timestamp		// (create & update)
+
+tabel Post :
+- id
+- id_user
+- content
+- id_first_post 	// History edit post
+- id_parent_post 	// Komen & reply post
+- show_post
+- timestamp		// (create & update)
+
+----------------------------------DEVELOPMENT----------------------------------
+tb_follow :
+- id_follow
+- id_user
+- id_target_user
+- date_follow
