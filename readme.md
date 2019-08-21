@@ -1,4 +1,7 @@
 ## Laratwitter - Simple Social Media
+
+![Example Image](https://raw.githubusercontent.com/arixwap/laratwitter/master/public/img/example-image.png)
+
 Made with <strong>Laravel 5.7</strong>, and store data using <strong>Mysqlite</strong>.
 This application just simple social media with feature :
 - Login / Register Account
