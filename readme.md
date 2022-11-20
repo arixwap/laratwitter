@@ -15,7 +15,6 @@ This application just simple social media with feature :
 - <strong>IF THE APP SHOW ERROR 500</strong>, it could be possible because the database <em>sqlite</em> doesn't connect or not found. Try to check <code>.env</code> file or check database file <code>database/db_laratwitter.mysqlite</code> is exist.
 
 There is some record on database with some user. Here the list email login for these user
-- arix.wap@gmail.com
 - bean@gmail.com
 - rangga@gmail.com
 - chef.juna@gmail.com
